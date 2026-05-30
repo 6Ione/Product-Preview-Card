@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fraunces">
+
   <title>Frontend Mentor | Product preview card component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -14,18 +16,21 @@
     .attribution a { color: hsl(228, 45%, 44%); }
 
     /* mobile viewport */
-    @media (max-width: 375px) {
+    @media (max-width: 600px) {
+      body{
+        background-color: hsl(30, 38%, 92%)
+      }
       .container {
         display: flex;
         justify-content: center;
         align-items: center;
         height: 100vh;
-        background-color: hsl(0, 0%, 95%);
       }
       .card {
         display: flex;
         flex-direction: column;
-        width: 327px;
+        width: 90%;
+        max-width: 400px;
         background-color: hsl(0, 0%, 100%);
         border-radius: 10px;
         box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
@@ -38,7 +43,18 @@
       .card-content {
         padding: 20px;
       }
+      .card-content h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500, 700;
+        font-size: 0.875rem;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        color: hsl(228, 12%, 48%);
+        margin-bottom: 20px;
+      }
       .card-content h2 {
+        font-family: 'Fraunces', serif;
+        font-weight: 700;
         font-size: 1.25rem;
         margin-bottom: 10px;
       }
@@ -49,6 +65,8 @@
       }
       .price {
         display: flex;
+        font-family: 'Fraunces', serif;
+        font-weight: 500, 700;
         align-items: center;
         margin-bottom: 20px;
       }
@@ -70,6 +88,8 @@
         color: hsl(0, 0%, 100%);
         border: none;
         border-radius: 5px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500, 700;
         font-size: 1rem;
         cursor: pointer;
         transition: background-color 0.3s ease;
@@ -80,13 +100,15 @@
     }
 
     /* Desktop viewport */
-    @media (min-width: 1440px) {
+    @media (min-width: 768px) {
+      body{
+        background-color: hsl(30, 38%, 92%)
+      }
       .container {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100vh;
-        background-color: hsl(0, 0%, 95%);
+        min-height: 100vh;
       }
       .card {
         display: flex;
@@ -99,26 +121,44 @@
       .card-image img {
         width: 100%;
         height: auto;
+        display: block;
+        object-fit: cover;
       }
       .card-content {
-        padding: 40px;
+        padding: 30px;
+        width: 50%;
+      }
+      .card-content h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500, 700;
+        font-size: 0.875rem;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        color: hsl(228, 12%, 48%);
+        margin-bottom: 20px;
       }
       .card-content h2 {
+        font-family: 'Fraunces', serif;
+        font-weight: 700;
         font-size: 1.75rem;
         margin-bottom: 20px;
       }
       .card-content p {
+        font-family: 'Montserrat', sans-serif;
         font-size: 1rem;
-        color: hsl(228, 45%, 44%);
+        color: hsl(228, 12%, 48%);
         margin-bottom: 30px;
       }
       .price {
         display: flex;
+        font-family: 'Fraunces', serif;
+        font-weight: 500, 700;
         align-items: center;
         margin-bottom: 30px;
       }
       .current-price {
         font-size: 2rem;
+        font-weight: 700;
         color: hsl(158, 36%, 37%);
         margin-right: 30px;
       }
@@ -135,6 +175,8 @@
         color: hsl(0, 0%, 100%);
         border: none;
         border-radius: 5px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500, 700;
         font-size: 1rem;
         cursor: pointer;
         transition: background-color 0.3s ease;
