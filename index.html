@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Product preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 0.6875rem; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    /* mobile viewport */
+    @media (max-width: 375px) {
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: hsl(0, 0%, 95%);
+      }
+      .card {
+        display: flex;
+        flex-direction: column;
+        width: 327px;
+        background-color: hsl(0, 0%, 100%);
+        border-radius: 10px;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+      }
+      .card-image img {
+        width: 100%;
+        height: auto;
+      }
+      .card-content {
+        padding: 20px;
+      }
+      .card-content h2 {
+        font-size: 1.25rem;
+        margin-bottom: 10px;
+      }
+      .card-content p {
+        font-size: 0.875rem;
+        color: hsl(228, 45%, 44%);
+        margin-bottom: 20px;
+      }
+      .price {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+      .current-price {
+        font-size: 1.5rem;
+        color: hsl(158, 36%, 37%);
+        margin-right: 20px;
+      }
+      .original-price {
+        font-size: 0.875rem;
+        color: hsl(228, 45%, 44%); 
+        text-decoration: line-through;
+      }
+      .add-to-cart {
+        display: block;
+        width: 100%;
+        padding: 15px;
+        background-color: hsl(158, 36%, 37%);
+        color: hsl(0, 0%, 100%);
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      .add-to-cart:hover {
+        background-color: hsl(158, 36%, 30%);
+      }
+    }
+
+    /* Desktop viewport */
+    @media (min-width: 1440px) {
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: hsl(0, 0%, 95%);
+      }
+      .card {
+        display: flex;
+        width: 600px;
+        background-color: hsl(0, 0%, 100%);
+        border-radius: 10px;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+      }
+      .card-image img {
+        width: 100%;
+        height: auto;
+      }
+      .card-content {
+        padding: 40px;
+      }
+      .card-content h2 {
+        font-size: 1.75rem;
+        margin-bottom: 20px;
+      }
+      .card-content p {
+        font-size: 1rem;
+        color: hsl(228, 45%, 44%);
+        margin-bottom: 30px;
+      }
+      .price {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+      }
+      .current-price {
+        font-size: 2rem;
+        color: hsl(158, 36%, 37%);
+        margin-right: 30px;
+      }
+      .original-price {
+        font-size: 1rem;
+        color: hsl(228, 45%, 44%); 
+        text-decoration: line-through;
+      }
+      .add-to-cart {
+        display: block;
+        width: 100%;
+        padding: 15px;
+        background-color: hsl(158, 36%, 37%);
+        color: hsl(0, 0%, 100%);
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      .add-to-cart:hover {
+        background-color: hsl(158, 36%, 30%);
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="card">
+      <div class="card-image">
+        <img src="./images/image-product-desktop.jpg" alt="Product Image">
+      </div>
+      <div class="card-content">
+        <h1>Perfume</h1>
+        <h2>Gabrielle Essence Eau De Parfum</h2>
+        <p>A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL.</p>
+        <div class="price">
+          <span class="current-price">$149.99</span>
+          <span class="original-price">$169.99</span>
+        </div>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+  
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </footer>
+</body>
+</html>
